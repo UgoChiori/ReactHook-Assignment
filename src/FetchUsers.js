@@ -5,6 +5,7 @@ import ErrorBoundary  from "./Components/ErrorBoundary"
 import axios from "axios";
 import Pagination from "./Components/Pagination";
 import { NavLink } from "react-router-dom";
+import './index.css';
 
 
 const url = `https://randomuser.me/api/?page=3&results=50&seed=abc`;
@@ -31,7 +32,7 @@ function FetchUsers() {
   };
   return (
     <div>
-      <h1>Users</h1>
+      <h1 className="customer-data">Customer Data</h1>
       {loading ? (
         <p>loading...</p>
       ) : (

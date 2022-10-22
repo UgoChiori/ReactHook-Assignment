@@ -1,11 +1,11 @@
 import React from "react";
 
-const Pagination = ({ totalPages, handleClick, page, setPage }) => {
+function Pagination  ({ totalPages, handleClick, previousPage,nextPage, canPreviousPage, canNextPage }) {
   const pages = [...Array(totalPages).keys()].map((num) => num + 1);
 
   return (
     <div>
-    
+    <button onClick={() => previousPage()} disabled={!canPreviousPage}>Prev</button>
 
       {pages.map((num) => (
         <button 
@@ -14,7 +14,10 @@ const Pagination = ({ totalPages, handleClick, page, setPage }) => {
       ))}
     
    
-    
+  
+      
+      <button onClick={()=> nextPage()} disabled={!canNextPage}>Next</button>
+ 
       
       
     </div>

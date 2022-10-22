@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './index.css';
 
 
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="navlinks">
         <Link to="/">Home</Link>
 
@@ -13,7 +14,7 @@ const Navbar = () => {
 
         <Link to="/contact">Contact</Link>
       </div>
-    </div>
+    </nav>
   );
 };
 

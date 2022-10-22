@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div className="contact">
             <h2> Contact Us </h2>
-            <h4>Phone: 07031967075</h4>
+           
             <SocialIcon/>
             
             <NavLink to="/">Home</NavLink>

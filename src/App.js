@@ -4,8 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import FetchUsers from "./FetchUsers";
 import Contact from "./Contact";
-
 import Error from "./Error";
+// import './index.css'
 
 function App() {
   return (
