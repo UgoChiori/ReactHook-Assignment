@@ -1,15 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-const About = () => {
-    return (
-        <div className="userdata">
-            <h2> About Us </h2>
-            <p>hi</p>
-            
-            <NavLink to="/">back to home</NavLink>
-        </div>
-    )
+var removeElement = function(nums, val) {
+    for (let a = nums.length - 1; a >= 0; a--) {
+        if(nums[a] === val) nums.splice( a, 1);
+    }
 }
+return nums.length;
+    
 
-export default About
+
+
+disabled={canPreviousPage}

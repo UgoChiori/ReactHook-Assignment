@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Users from "./Components/Ugo";
 import { USER_PER_PAGE } from "./Files/MyUser";
-import ErrorBoundary  from "./Components/ErrorBoundary"
+import ErrorBoundary  from "./Components/ErrorBoundary";
 import axios from "axios";
 import Pagination from "./Components/Pagination";
 import { NavLink } from "react-router-dom";
@@ -39,7 +39,7 @@ function FetchUsers() {
         <>
         <ErrorBoundary>
           <Users users={users} page={page} />
-          <Pagination totalPages={totalPages} handleClick={handleClick} />
+          <Pagination totalPages={totalPages} handleClick={handleClick} setPage={setPage} page={page} />
           </ErrorBoundary>
         </>
       )}
