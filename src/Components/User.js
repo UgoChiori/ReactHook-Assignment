@@ -2,10 +2,11 @@ import React from "react";
 
 const User = ({ user }) => {
   return (
-    <div style={{width: '250px', margin: 'auto'}}>
+    <div className="container">
       <hr />
-      <p>{`Full Name: ${user.name.first} ${user.name.last}`}</p>
-       <p> {`Phone: ${user.phone}`} </p>
+      <p className="names">{` ${user.name.first} ${user.name.last}`}</p>
+       <p className="names"> {` ${user.phone}`} </p>
+       
     </div>
   );
 };

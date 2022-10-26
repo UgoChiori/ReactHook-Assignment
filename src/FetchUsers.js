@@ -32,7 +32,7 @@ function FetchUsers() {
   };
   return (
     <div>
-      <h1 className="customer-data">Customer Data</h1>
+      <h1 className="customer-data">Client Records</h1>
       {loading ? (
         <p>loading...</p>
       ) : (

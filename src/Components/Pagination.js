@@ -23,7 +23,7 @@ function Pagination({
   };
 
   return (
-    <div style={{border: '1px solid black', width:'fit-content', margin: 'auto'}}>
+    <div style={{ width:'fit-content', margin: 'auto'}}>
       <button style={{cursor: 'pointer'}}
         onClick={(event) => {
           previousPage(event);
@@ -34,7 +34,7 @@ function Pagination({
       </button>
 
       {pages.map((num) => (
-        <button style={{cursor: 'pointer'}} key={num} onClick={() => handleClick(num)}>
+        <button className="btn-pag" style={{cursor: 'pointer'}} key={num} onClick={() => handleClick(num)}>
           {num}
         </button>
       ))}

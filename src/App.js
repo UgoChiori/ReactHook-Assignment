@@ -3,9 +3,9 @@ import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import FetchUsers from "./FetchUsers";
-import Contact from "./Contact";
+import Inventory from "./Inventory";
 import Error from "./Error";
-// import './index.css'
+import './index.css'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
 
           <Route path="/users" element={<FetchUsers />} />
 
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Inventory/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </>
