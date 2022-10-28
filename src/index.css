@@ -7,7 +7,14 @@
 body {
   background-color: rgb(231, 202, 165);
 }
-
+.homelink {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0 1rem;
+  text-align: center;
+}
 img {
   margin-left: 25%;
   width: 50%;
@@ -75,15 +82,35 @@ h5 {
   text-align: center;
 }
 
+.buttons {
+  font-size: 15px;
+  cursor: pointer;
+  margin: 3px;
+  padding: 9px;
+  border-radius: 10px;
+}
+.buttons:hover {
+  background-color: black;
+  color: white;
+  
+}
+
 .btn-pag {
   color: black;
+  padding: 10px;
+  font-size: 20px;
+  margin: 3px;
   cursor: pointer;
+  border-radius: 10px;
 }
 .btn-pag:hover {
   background-color: black;
   color: white;
 }
-
+button :hover {
+  background-color: black;
+  color: white;
+}
 @media screen and (max-width: 768px) {
   body {
     background-color: rgb(107, 69, 69);
@@ -142,10 +169,8 @@ h5 {
 
 @media screen and (max-width: 425px) {
   body {
-   
     background-color: white;
     width: 100%;
-    
   }
   h2 {
     font-size: 20px;
@@ -191,6 +216,5 @@ h5 {
     margin-left: 0;
     width: 100%;
     border-radius: 10px;
-    
   }
 }

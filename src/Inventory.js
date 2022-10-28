@@ -25,8 +25,10 @@ const Inventory = () => {
 
                 </ul>
             
+            <div className="homelink">
+                <NavLink to="/">Home</NavLink>
+                </div>
             
-            <NavLink to="/">Home</NavLink>
         </div>
     )
 }

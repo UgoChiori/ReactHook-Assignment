@@ -24,7 +24,7 @@ function Pagination({
 
   return (
     <div style={{ width:'fit-content', margin: 'auto'}}>
-      <button style={{cursor: 'pointer'}}
+      <button className="buttons"
         onClick={(event) => {
           previousPage(event);
         }}
@@ -39,7 +39,7 @@ function Pagination({
         </button>
       ))}
 
-      <button style={{cursor: 'pointer'}} onClick={(event) => nextPage(event)} disabled={page === 10}>
+      <button className="buttons" onClick={(event) => nextPage(event)} disabled={page === 10}>
         Next
       </button>
     </div>
