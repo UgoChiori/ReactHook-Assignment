@@ -5,12 +5,12 @@ class ErrorBoundary extends Component {
   
   constructor(props) {
     super(props);
-    this.state = { hasError: true };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error) {
    
-    return { hasError: true };
+    return { hasError: false };
   }
 
   componentDidCatch(error, info) {
