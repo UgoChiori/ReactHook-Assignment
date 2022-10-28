@@ -6,8 +6,11 @@ const Error =() => {
     return (
       
         <div className="error-page">
-            <h1>404 Error Page</h1>
-            <p>Sorry, this page does not exist.</p>
+            <h1>🙄🙄🙄🙄🙄🙄</h1>
+            <img
+        src={require("./404error.jpeg")}
+        alt="coffee poured in transparent mug"
+      />
 
             <NavLink to="/">Home</NavLink>
 

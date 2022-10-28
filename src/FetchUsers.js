@@ -30,6 +30,7 @@ function FetchUsers() {
   const handleClick = (num) => {
     setPage(num);
   };
+  
   return (
     <div>
       <h1 className="customer-data">Client Records</h1>
@@ -37,10 +38,10 @@ function FetchUsers() {
         <p>loading...</p>
       ) : (
         <>
-        <ErrorBoundary>
+       
           <Users users={users} page={page} />
           <Pagination totalPages={totalPages} handleClick={handleClick} setPage={setPage} page={page} />
-          </ErrorBoundary>
+          <ErrorBoundary />
         </>
       )}
 
