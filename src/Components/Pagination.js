@@ -28,7 +28,7 @@ function Pagination({
         onClick={(event) => {
           previousPage(event);
         }}
-        disabled={page == 1}
+        disabled={page === 1}
       >
         Prev
       </button>
@@ -39,7 +39,7 @@ function Pagination({
         </button>
       ))}
 
-      <button style={{cursor: 'pointer'}} onClick={(event) => nextPage(event)} disabled={page == 10}>
+      <button style={{cursor: 'pointer'}} onClick={(event) => nextPage(event)} disabled={page === 10}>
         Next
       </button>
     </div>

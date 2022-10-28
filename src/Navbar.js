@@ -13,6 +13,8 @@ const Navbar = () => {
         <Link to="/users">CLIENTS</Link>
 
         <Link to="/contact">INVENTORY</Link>
+
+       
       </div>
     </nav>
   );
