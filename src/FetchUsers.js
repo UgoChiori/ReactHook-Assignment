@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Users from "./Components/Ugo";
 import { USER_PER_PAGE } from "./Files/MyUser";
-import ErrorBoundary  from "./Components/ErrorBoundary";
+import ErrorBoundary from "./Components/ErrorBoundary";
 import axios from "axios";
 import Pagination from "./Components/Pagination";
-import { Link} from "react-router-dom";
-import './index.css';
-
+import { Link } from "react-router-dom";
+import "./index.css";
 
 const url = `https://randomuser.me/api/?page=3&results=50&seed=abc`;
 
@@ -30,26 +29,29 @@ function FetchUsers() {
   const handleClick = (num) => {
     setPage(num);
   };
-  
 
   return (
     <div>
       <h1 className="customer-data">Client Records</h1>
-      
+
       {loading ? (
         <p>loading...</p>
-        
       ) : (
         <>
-       
-          <Users users={users} page={page} />
-          <Pagination totalPages={totalPages} handleClick={handleClick} setPage={setPage} page={page} />
-          <ErrorBoundary />
+          <ErrorBoundary>
+            <Users users={users} page={page} />
+            <Pagination
+              totalPages={totalPages}
+              handleClick={handleClick}
+              setPage={setPage}
+              page={page}
+            />
+          </ErrorBoundary>
         </>
       )}
 
       <div className="homelink">
-      <Link to="/">Home</Link>
+        <Link to="/">Home</Link>
       </div>
     </div>
   );
