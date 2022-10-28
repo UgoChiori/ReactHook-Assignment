@@ -4,7 +4,7 @@ import { USER_PER_PAGE } from "./Files/MyUser";
 import ErrorBoundary  from "./Components/ErrorBoundary";
 import axios from "axios";
 import Pagination from "./Components/Pagination";
-import { Link} from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import './index.css';
 
 
@@ -49,7 +49,7 @@ function FetchUsers() {
       )}
 
       <div className="homelink">
-      <Link to="/">Home</Link>
+      <NavLink to="/">Home</NavLink>
       </div>
     </div>
   );
