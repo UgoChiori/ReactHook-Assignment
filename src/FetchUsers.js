@@ -31,11 +31,14 @@ function FetchUsers() {
     setPage(num);
   };
   
+
   return (
     <div>
       <h1 className="customer-data">Client Records</h1>
+      
       {loading ? (
         <p>loading...</p>
+        
       ) : (
         <>
        

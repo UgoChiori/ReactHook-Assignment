@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import FetchUsers from "./FetchUsers";
 import Inventory from "./Inventory";
 import Error from "./Error";
-import ErrorBoundary from "./Components/ErrorBoundary";
+
 import "./index.css";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <Route path="/contact" element={<Inventory />} />
             <Route path="*" element={<Error />} />
           </Routes>
-        <ErrorBoundary />
+       
       </>
     </section>
   );
