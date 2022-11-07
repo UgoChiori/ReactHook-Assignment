@@ -4,7 +4,11 @@ import { USER_PER_PAGE } from "./Files/MyUser";
 
 import axios from "axios";
 import Pagination from "./Components/Pagination";
+
 import { Link } from "react-router-dom";
+import "./index.css";
+
+import { NavLink } from "react-router-dom";
 import "./index.css";
 
 const url = `https://randomuser.me/api/?page=3&results=50&seed=abc`;
@@ -50,6 +54,8 @@ function FetchUsers() {
 
       <div className="homelink">
         <Link to="/">Home</Link>
+
+        <NavLink to="/">Home</NavLink>
       </div>
     </div>
   );

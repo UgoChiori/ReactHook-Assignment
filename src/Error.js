@@ -9,7 +9,7 @@ const Error =() => {
             <h1>🙄🙄🙄🙄🙄🙄</h1>
             <img
         src={require("./404error.jpeg")}
-        alt="coffee poured in transparent mug"
+        alt="funny error 404 meme...grumpy troll"
       />
 
             <NavLink to="/">Home</NavLink>
