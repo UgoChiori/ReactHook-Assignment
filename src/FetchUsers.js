@@ -55,7 +55,6 @@ function FetchUsers() {
       <div className="homelink">
         <Link to="/">Home</Link>
 
-        <NavLink to="/">Home</NavLink>
       </div>
     </div>
   );
