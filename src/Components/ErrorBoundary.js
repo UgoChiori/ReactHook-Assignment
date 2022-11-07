@@ -1,30 +1,48 @@
-import React, { Component} from "react";
+import React from "react";
 
+const ErrorFallback
+ = ({ children }) => {
+  const [error, setError] = React.useState(null);
 
-class ErrorBoundary extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+  if (error) {
+    return (
+      <div>
+        <h1>Something went wrong</h1>
+        <pre>{error.message}</pre>
+        <button onClick={() => setError(null)}>Try again</button>
+      </div>
+    );
   }
 
-  static getDerivedStateFromError(error) {
-   
-    return { hasError: false};
-  }
+  return children;
+};
 
-  componentDidCatch(error, info) {
-    
-  }
+export default ErrorFallback;
 
-  render() {
-    if (this.state.hasError) {
-     
-      return <h1>Something went wrong.</h1>;
-    }
+// class ErrorBoundary extends Component {
 
-    return this.props.children; 
-  }
-}
+//   constructor(props) {
+//     super(props);
+//     this.state = { hasError: false };
+//   }
 
-export default ErrorBoundary
+//   static getDerivedStateFromError(error) {
+
+//     return { hasError: false};
+//   }
+
+//   componentDidCatch(error, info) {
+
+//   }
+
+//   render() {
+//     if (this.state.hasError) {
+
+//       return <h1>Something went wrong.</h1>;
+//     }
+
+//     return this.props.children;
+//   }
+// }
+
+// export default ErrorBoundary

@@ -9,7 +9,20 @@ function Pagination({
 
   
 }) {
-  const pages = [...Array(totalPages).keys()].map((num) => num + 1);
+  
+  const pages = [...Array(totalPages).keys()].map (addNum);
+
+  function addNum(num) {
+    return num + 1;
+  }
+
+
+
+
+
+
+
+  console.log(pages);
   // Previous button click...
   const previousPage = (event) => {
     event.preventDefault();

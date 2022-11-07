@@ -5,15 +5,23 @@ import Navbar from "./Navbar";
 import FetchUsers from "./FetchUsers";
 import Inventory from "./Inventory";
 import Error from "./Error";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./Components/ErrorBoundary";
 
 import "./index.css";
 
 function App() {
+  const [explode, setExplode] = React.useState(false);
   return (
     <section className="home">
-      <>
-        <Navbar />
-       
+      <ErrorBoundary
+        FallbackComponent={ErrorFallback}
+        onReset={() => setExplode(false)}
+        {...{ explode }}
+      >
+        <>
+          <Navbar />
+
           <Routes>
             <Route path="/" element={<Home />} />
 
@@ -22,8 +30,8 @@ function App() {
             <Route path="/contact" element={<Inventory />} />
             <Route path="*" element={<Error />} />
           </Routes>
-       
-      </>
+        </>
+      </ErrorBoundary>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Users from "./Components/Ugo";
+import Users from "./Components/Users";
 import { USER_PER_PAGE } from "./Files/MyUser";
-import ErrorBoundary from "./Components/ErrorBoundary";
+
 import axios from "axios";
 import Pagination from "./Components/Pagination";
 import { Link } from "react-router-dom";
@@ -35,18 +35,16 @@ function FetchUsers() {
       <h1 className="customer-data">Client Records</h1>
 
       {loading ? (
-        <p>loading...</p>
+        <p>LOADING...</p>
       ) : (
         <>
-          <ErrorBoundary>
-            <Users users={users} page={page} />
-            <Pagination
-              totalPages={totalPages}
-              handleClick={handleClick}
-              setPage={setPage}
-              page={page}
-            />
-          </ErrorBoundary>
+          <Users users={users} page={page} />
+          <Pagination
+            totalPages={totalPages}
+            handleClick={handleClick}
+            setPage={setPage}
+            page={page}
+          />
         </>
       )}
 
